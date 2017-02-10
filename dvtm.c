@@ -1321,10 +1321,7 @@ scrollback(const char *args[]) {
 	if (!is_content_visible(sel))
 		return;
 
-	if (!args[0] || atoi(args[0]) < 0)
-		vt_scroll(sel->term, -sel->h/2);
-	else
-		vt_scroll(sel->term,  sel->h/2);
+	vt_scroll(sel->term, args[0] ? atoi(args[0]) : 1);
 
 	draw(sel);
 	curs_set(vt_cursor_visible(sel->term));
