@@ -1,10 +1,10 @@
 # Customize below to fit your system
 
-PREFIX ?= /usr/local
+PREFIX ?= /home/noctua/.local
 MANPREFIX = ${PREFIX}/share/man
 # specify your systems terminfo directory
 # leave empty to install into your home folder
-TERMINFO := ${DESTDIR}${PREFIX}/share/terminfo
+TERMINFO := /home/noctua/.terminfo
 
 INCS = -I.
 LIBS = -lc -lutil -lncursesw
